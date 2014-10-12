@@ -12,6 +12,6 @@ Building and running
   
   ```
     $ unzip build/distributions/ex1.zip
-    $ cd bin/
-    $ ./ex1
+    $ cd ex1/bin/
+    $ ./ex1 server
   ```
