@@ -18,3 +18,5 @@ Building and running
     $ cd ex1/bin/
     $ ./ex1 server
   ```
+  
+  * Webservice is available at `http://localhost:8080/paper`
