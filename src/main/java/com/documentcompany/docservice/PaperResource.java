@@ -31,7 +31,7 @@ public class PaperResource {
 
         // instead of returning static string, there should be some code which
         // actually reads the paper file
-        return "Some page text ";
+        return "Some page text";
     }
 
 }
