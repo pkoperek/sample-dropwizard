@@ -1,0 +1,20 @@
+apply plugin: 'java'
+apply plugin: 'application'
+
+task wrapper(type: Wrapper) {
+        gradleVersion = '2.1'
+}
+
+repositories {
+        mavenCentral()
+}
+
+dependencies {
+        compile group: 'io.dropwizard', name: 'dropwizard-core', version: '0.7.0'
+}
+
+mainClassName = ''
+
+run {
+        args 'server', 'default.yml'
+}
