@@ -16,6 +16,8 @@ public class PaperServiceApplicationTest {
 
         // Given
         PaperServiceConfiguration configuration = new PaperServiceConfiguration();
+        configuration.setMemcachedAddress("localhost:11211");
+
         JerseyEnvironment jerseyEnvironment = mock(JerseyEnvironment.class);
         Environment environment = mock(Environment.class);
         given(environment.jersey()).willReturn(jerseyEnvironment);
