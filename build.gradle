@@ -18,7 +18,7 @@ dependencies {
     testCompile group: "org.easytesting", name: "fest-assert", version: "1.4"
 }
 
-mainClassName = ''
+mainClassName = 'com.documentcompany.docservice.PaperServiceApplication'
 
 run {
     args 'server', 'default.yml'
