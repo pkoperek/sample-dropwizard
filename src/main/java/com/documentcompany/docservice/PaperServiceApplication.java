@@ -17,6 +17,6 @@ public class PaperServiceApplication extends Application<PaperServiceConfigurati
 
     @Override
     public void run(PaperServiceConfiguration configuration, Environment environment) throws Exception {
-        // does nothing
+        environment.jersey().register(new PaperResource());
     }
 }
