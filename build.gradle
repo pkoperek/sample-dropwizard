@@ -2,19 +2,20 @@ apply plugin: 'java'
 apply plugin: 'application'
 
 task wrapper(type: Wrapper) {
-        gradleVersion = '2.1'
+    gradleVersion = '2.1'
 }
 
 repositories {
-        mavenCentral()
+    mavenCentral()
 }
 
 dependencies {
-        compile group: 'io.dropwizard', name: 'dropwizard-core', version: '0.7.0'
+    compile group: 'io.dropwizard', name: 'dropwizard-core', version: '0.7.0'
+    compile group: 'net.spy', name: 'spymemcached', version: '2.11.4'
 }
 
 mainClassName = ''
 
 run {
-        args 'server', 'default.yml'
+    args 'server', 'default.yml'
 }
