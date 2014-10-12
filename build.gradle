@@ -23,3 +23,5 @@ mainClassName = 'com.documentcompany.docservice.PaperServiceApplication'
 run {
     args 'server', 'default.yml'
 }
+
+jar.dependsOn test
