@@ -25,4 +25,8 @@ run {
     args 'server', 'default.yml'
 }
 
+applicationDistribution.from('src/main/resources') {
+    into "bin"
+}
+
 jar.dependsOn test
