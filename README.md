@@ -11,6 +11,7 @@ Building and running
 ====================
 
   * Build with gradle `$ ./gradlew distZip`
+  * Remember about starting memcached first!
   * Run from created distribution: 
   
   ```
