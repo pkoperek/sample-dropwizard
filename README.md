@@ -16,7 +16,7 @@ Building and running
   ```
     $ unzip build/distributions/ex1.zip
     $ cd ex1/bin/
-    $ ./ex1 server
+    $ ./ex1 server default.yml
   ```
   
   * Webservice is available at `http://localhost:8080/paper`
