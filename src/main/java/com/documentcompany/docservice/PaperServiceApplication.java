@@ -19,9 +19,7 @@ public class PaperServiceApplication extends Application<PaperServiceConfigurati
 
     @Override
     public void run(PaperServiceConfiguration configuration, Environment environment) throws Exception {
-        MemcachedClient memcachedClient = new MemcachedClient(
-                AddrUtil.getAddresses(configuration.getMemcachedAddress())
-        );
+        MemcachedClient memcachedClient = new MemcachedClient(AddrUtil.getAddresses(configuration.getMemcachedAddress()));
         environment.jersey().register(new PaperResource(memcachedClient));
     }
 }
