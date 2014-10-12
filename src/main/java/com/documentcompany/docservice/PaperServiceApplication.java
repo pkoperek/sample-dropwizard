@@ -3,6 +3,8 @@ package com.documentcompany.docservice;
 import io.dropwizard.Application;
 import io.dropwizard.setup.Bootstrap;
 import io.dropwizard.setup.Environment;
+import net.spy.memcached.AddrUtil;
+import net.spy.memcached.MemcachedClient;
 
 public class PaperServiceApplication extends Application<PaperServiceConfiguration> {
 
@@ -17,6 +19,9 @@ public class PaperServiceApplication extends Application<PaperServiceConfigurati
 
     @Override
     public void run(PaperServiceConfiguration configuration, Environment environment) throws Exception {
-        environment.jersey().register(new PaperResource());
+        MemcachedClient memcachedClient = new MemcachedClient(
+                AddrUtil.getAddresses(configuration.getMemcachedAddress())
+        );
+        environment.jersey().register(new PaperResource(memcachedClient));
     }
 }
