@@ -6,9 +6,9 @@ Building and running
   * Run from created distribution: 
   
   ```
-    $ unzip build/distributions/ex1.zip
-    $ cd ex1/bin/
-    $ ./ex1 server default.yml
+    $ unzip build/distributions/sample-dropwizard.zip
+    $ cd sample-dropwizard/bin/
+    $ ./sample-dropwizard server default.yml
   ```
   
   * Webservice is available at `http://localhost:8080/paper`
